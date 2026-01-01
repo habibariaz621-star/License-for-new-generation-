@@ -1,0 +1,26 @@
+# License App Code
+# Author: Umm e Habiba
+
+VALID_LICENSE_KEYS = [
+    "ABC123-XYZ789",
+    "EDU2026-PLASMA",
+    "COMSOL-AIR-001"
+]
+
+def check_license(user_key):
+    if user_key in VALID_LICENSE_KEYS:
+        return True
+    else:
+        return False
+
+# Main program
+print("Welcome to the Licensed Application")
+
+license_key = input("Enter your license key: ")
+
+if check_license(license_key):
+    print("License verified ✅")
+    print("Access granted to the application")
+else:
+    print("Invalid license ❌")
+    print("Access denied")
